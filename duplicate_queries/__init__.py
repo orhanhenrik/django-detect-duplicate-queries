@@ -51,6 +51,10 @@ class DetectDuplicateQueries:
 
         return result
 
+    @property
+    def has_duplicates(self) -> bool:
+        return bool(self.duplicates)
+
     def print_duplicates(self) -> None:
         if not self.duplicates:
             return
